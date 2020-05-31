@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ 
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+    
+// Styling for flash
+
+.flash-container
+{
+    position: absolute;
+    
+    width: 100%;
+}
+
+.alert-success, .alert-danger
+{
+    text-align : center;
+}

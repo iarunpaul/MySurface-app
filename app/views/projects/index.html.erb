@@ -1,0 +1,48 @@
+<div class= "container">
+  <div class = "row">
+    <h1 class= "text-center">Projects</h1>
+    <div class = "col-md-6">
+      <div class="container">       
+          
+              <div class = "row">            
+              
+                  <div class = "col-md-4">
+                    <h4>Name</h4>
+                  </div>
+                  <div class = "col-md-4">
+                    <h4>Description</h4>
+                  </div>
+                  <div class = "col-md-4"> 
+                    <span></span>
+                  </div> 
+               
+               </div> 
+                       
+                 <div class = "well">         
+                <div class = "row"> 
+                 
+                    <% @projects.each do |project| %>
+                              
+                        <div class = "col-md-4">
+                          <p><%= project.name %></p>
+                        </div>
+                        <div class = "col-md-4">
+                          <p><%= project.description %></p>
+                        </div>
+                        <div class = "col-md-4">  
+                          <p><%= link_to 'Show', project %></p>
+                          <p><%= link_to 'Edit', edit_project_path(project) %></p>
+                       
+                     </div>
+                    <% end %>
+                  
+                </div>
+                 </div>        
+           
+            </div>
+            <%= link_to 'New Project', new_project_path %> 
+          </div>
+          <br>  
+      </div>
+</div>
+
